@@ -7,7 +7,5 @@ public class Rectangle {
         System.out.println(text);
     }
 
-    private static double rectangleArea(double a, double b) {
-        return a * b;
-    }
+    private static double rectangleArea(double a, double b) { return a * b; }
 }
