@@ -2,34 +2,26 @@ package ru.stqa.geometry.figures;
 
 public class Triangle {
     public static void main(String[] args) {
+double a = 3.0;
+double b = 4.0;
+double c = 5.0;
+double s = Pr(a, b, c);
+double area = TriangleArea(a, b, c, s);
+printTriangle(area, b, c);
+    }
 
-        printPerimeterTriangle(5, 6, 7);
-        printTriangleArea(9, 5, 6, 7);
+    public static void printTriangle(double area, double b, double c) {
+        String text = String.format("Площадь треугольника =  %.2f%n", area);
+        System.out.println(text);
+    }
 
+    public static double TriangleArea(double a, double b, double c, double s) {
+        return Math.sqrt(s * (s - a) * (s - b) * (s - c));
     }
 
 
-    public static void printPerimeterTriangle(double a, double b, double c) {
-        double PerimeterTriangle;
-
-        System.out.println("Периметр треугольника" + " = " + (a + b + c) / 2);
+    public static double Pr(double a, double b, double c) {
+        return (a + b + c) / 2;
     }
 
-    public static void printTriangleArea(double printPerimeterTriangle, double a, double b, double c) {
-        double TriangleArea;
-
-
-        System.out.println("Площадь треугольника" + "=" + (printPerimeterTriangle* (printPerimeterTriangle - a) * (printPerimeterTriangle - b) * (printPerimeterTriangle - c)));
-    }
-
-    public static double TriangleArea(double PerimeterTriangle){
-        double a = 5;
-        double b = 6;
-        double c = 7;
-        return PerimeterTriangle * (PerimeterTriangle - a) * (PerimeterTriangle - b) * (PerimeterTriangle - c);
-
-    }
-    public static double PerimeterTriangle(double a, double b, double c) {
-    return a;
-    }
 }
