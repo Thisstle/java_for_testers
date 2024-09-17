@@ -7,7 +7,7 @@ public class TriangleTests {
 
     @Test
     void canCalculateArea() {
-        double result = Triangle.TriangleArea(3.0, 4.0, 5.0, 6.0);
+        double result = Triangle.TriangleArea(3.0, 4.0, 5.0);
         Assertions.assertEquals(6.0, result);
     }
 }
